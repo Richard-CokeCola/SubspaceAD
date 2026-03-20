@@ -8,8 +8,7 @@
 
 This repository contains the official implementation of the paper:
 
-> **SubspaceAD: Training-Free Few-Shot Anomaly Detection via Subspace Modeling [CVPR2026]** 
-[Link to paper](https://arxiv.org/abs/2602.23013)
+> [**SubspaceAD: Training-Free Few-Shot Anomaly Detection via Subspace Modeling (CVPR2026)**](https://arxiv.org/abs/2602.23013)
 
 ---
 
