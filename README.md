@@ -30,8 +30,8 @@ Despite its simplicity, SubspaceAD achieves **state-of-the-art** performance in 
 
 **Main Results (1-Shot)**
 
-* **MVTec-AD:** 98.0% Image AUROC; 97.6% Pixel AUROC
-* **VisA:** 93.3% Image AUROC; 98.3% Pixel AUROC
+* **MVTec-AD:** 97.1% Image AUROC; 97.5% Pixel AUROC
+* **VisA:** 93.4% Image AUROC; 98.2% Pixel AUROC
 
 ---
 
@@ -169,21 +169,21 @@ python main.py \
 | ---------- | -------------- | -------- | -------- |
 | **1-Shot** | PromptAD       | 94.2     | 86.9     |
 |            | AnomalyDINO    | 96.6     | 87.4     |
-|            | **SubspaceAD** | **98.0** | **93.3** |
+|            | **SubspaceAD** | **97.1** | **93.4** |
 | **2-Shot** | PromptAD       | 95.7     | 88.3     |
 |            | AnomalyDINO    | 96.9     | 89.7     |
-|            | **SubspaceAD** | **98.1** | **94.1** |
+|            | **SubspaceAD** | **97.6** | **93.7** |
 | **4-Shot** | PromptAD       | 96.6     | 89.1     |
 |            | AnomalyDINO    | 97.7     | 92.6     |
-|            | **SubspaceAD** | **98.4** | **94.5** |
+|            | **SubspaceAD** | **97.9** | **94.7** |
 
 ### Batched Zero-Shot
 
 | Method         | MVTec-AD | VisA     |
 | -------------- | -------- | -------- |
-| MuSc           | **97.8** | 94.1     |
+| MuSc           | **97.8** | **94.1**     |
 | AnomalyDINO    | 94.2     | 90.7     |
-| **SubspaceAD** | 96.6     | **97.7** |
+| **SubspaceAD** | 96.6     | **94.1** |
 
 ## Citation
 
