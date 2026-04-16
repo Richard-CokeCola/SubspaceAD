@@ -31,7 +31,8 @@ def _ensure_rgb(img_np: np.ndarray) -> np.ndarray:
 def _create_heatmap(anom_map_norm_float: np.ndarray) -> np.ndarray:
     """Converts a 0-1 float anomaly map to an 8-bit JET colormap."""
     anom_map_u8 = (anom_map_norm_float * 255).astype(np.uint8)
-    return cv2.applyColorMap(anom_map_u8, cv2.COLORMAP_JET)
+    heatmap_bgr = cv2.applyColorMap(anom_map_u8, cv2.COLORMAP_JET)
+    return cv2.cvtColor(heatmap_bgr, cv2.COLOR_BGR2RGB)
 
 
 def save_overlay_for_intro(
@@ -52,7 +53,8 @@ def save_overlay_for_intro(
     img_np = _ensure_rgb(img_np)
 
     anom_map_u8 = (anom_map * 255).astype(np.uint8)
-    heatmap = cv2.applyColorMap(anom_map_u8, cv2.COLORMAP_JET)
+    heatmap_bgr = cv2.applyColorMap(anom_map_u8, cv2.COLORMAP_JET)
+    heatmap = cv2.cvtColor(heatmap_bgr, cv2.COLOR_BGR2RGB)
     try:
         _, binary_mask = cv2.threshold(
             anom_map_u8, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU
